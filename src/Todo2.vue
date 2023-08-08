@@ -12,7 +12,7 @@ export default {
         async function getAnswer() {
             answer.value = 'Thinking...'
             const qingyunkeRes = await fetch(
-                `https://124.223.90.239:8000/api/qingyunke?msg=${question.value}`
+                `http://124.223.90.239:8000/api/qingyunke?msg=${question.value}`
             )
             const qingyunkAns = await qingyunkeRes.json()
             return qingyunkAns.data.msg
